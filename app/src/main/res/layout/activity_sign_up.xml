@@ -80,18 +80,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
+
     <ImageView
 
         android:id="@+id/imageView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/username"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@mipmap/ic_user_name"
+        android:layout_marginEnd="272dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextname"
         app:layout_constraintEnd_toEndOf="@+id/editTextname"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editTextname"
         app:layout_constraintTop_toTopOf="@+id/editTextname"
         tools:ignore="MissingConstraints" />
-
 
     <EditText
         android:id="@+id/editTextEmail"
@@ -117,14 +118,13 @@
 
     <ImageView
 
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="0dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
 
-
-        android:src="@drawable/email"
+        android:src="@mipmap/ic_mail"
+        android:layout_marginEnd="272dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextEmail"
         app:layout_constraintEnd_toEndOf="@+id/editTextEmail"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editTextEmail"
         app:layout_constraintTop_toTopOf="@+id/editTextEmail"
         tools:ignore="MissingConstraints" />
@@ -152,12 +152,14 @@
 
     <ImageView
 
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/pass"
-        app:layout_constraintEnd_toEndOf="@+id/editTextname"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextname"
+        android:id="@+id/imageView3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="272dp"
+        android:src="@mipmap/ic_pass"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/editTextPassword"
         app:layout_constraintTop_toTopOf="@+id/editTextPassword"
         tools:ignore="MissingConstraints" />
 

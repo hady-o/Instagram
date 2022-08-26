@@ -35,16 +35,15 @@
     <ImageView
 
         android:id="@+id/imageView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginEnd="268dp"
-        android:src="@drawable/username"
+        android:src="@mipmap/ic_user_name"
         app:layout_constraintBottom_toBottomOf="@+id/editTextLogin"
         app:layout_constraintEnd_toEndOf="@+id/editTextLogin"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="@+id/editTextPassword"
         app:layout_constraintTop_toTopOf="@+id/editTextLogin"
-        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -71,12 +70,13 @@
     <ImageView
 
         android:id="@+id/imageView2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/pass"
-        app:layout_constraintEnd_toEndOf="@+id/editTextLogin"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextLogin"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@mipmap/ic_pass"
+        android:layout_marginEnd="268dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/editTextPassword"
         app:layout_constraintTop_toTopOf="@+id/editTextPassword"
         tools:ignore="MissingConstraints" />
 
