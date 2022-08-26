@@ -1,6 +1,7 @@
 package com.example.instapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +16,10 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding =ActivitySignUpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        if(AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES)
+        {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
         binding.loginButtonId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
