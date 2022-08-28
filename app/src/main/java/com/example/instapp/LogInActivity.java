@@ -24,5 +24,13 @@ public class LogInActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        binding.logInButtonId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(getApplicationContext(),HomeActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

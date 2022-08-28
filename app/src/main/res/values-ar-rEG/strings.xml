@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Instagram</string>
+    <string name="username">الاسم</string>
+    <string name="app_slogan">شارك لحظاتك</string>
+    <string name="login">تسجيل دخول</string>
+    <string name="forgot_password">نسيت كلمة المرور؟</string>
+    <string name="password">كلمة المرور</string>
+    <string name="sign_up_now">سجل الآن</string>
+    <string name="email_address">البريد الإلكتروني</string>
+    <string name="with_no_account">ليس لديك حساب؟</string>
+    <string name="already_have_account">لديك حساب؟</string>
+    <string name="developed_by_hadi">تم تطويره بواسطة هادي</string>
+    <string name="sign_up_title">إنشاء حساب</string>
+    <string name="sign_up">أنشئ حساب</string>
+</resources>
