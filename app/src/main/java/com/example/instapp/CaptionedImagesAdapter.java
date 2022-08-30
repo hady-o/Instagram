@@ -12,8 +12,7 @@ import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-class CaptionedImagesAdapter extends
-        RecyclerView.Adapter<CaptionedImagesAdapter.ViewHolder> {
+class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter.ViewHolder> {
 
     //for captions and image resources
     private String[] captions;
@@ -50,13 +49,6 @@ class CaptionedImagesAdapter extends
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        CardView cardView=holder.cardView;
-        ImageView imageView=(ImageView) cardView.findViewById(R.id.posted_image);
-        Drawable drawable= ContextCompat.getDrawable(cardView.getContext(),imageIDs[position]);
-        //populate the CardView's ImageView and TextView with data
-        imageView.setImageDrawable(drawable);
-        imageView.setContentDescription(captions[position]);
-        TextView textView=(TextView) cardView.findViewById(R.id.info_text);
-        textView.setText(captions[position]);
+
     }
 }

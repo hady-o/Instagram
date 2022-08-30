@@ -25,18 +25,18 @@ public class HomeActivity extends AppCompatActivity {
         RecyclerView postRecycler=(RecyclerView) inflater
                 .inflate(R.layout.activity_home,container,false);
 
-        String[] postNames=new String[Post.posts.length];
-        for (int i=0;i<postNames.length;i++){
-            postNames[i]=Post.posts[i].getName();
-        }
+//        String[] postNames=new String[Post.posts.length];
+//        for (int i=0;i<postNames.length;i++){
+//            postNames[i]=Post.posts[i].getName();
+//        }
+//
+//        int[] postImages=new int[Post.posts.length];
+//        for (int i=0;i<postImages.length;i++){
+//            postImages[i]=Post.posts[i].getImageResourceID();
+//        }
 
-        int[] postImages=new int[Post.posts.length];
-        for (int i=0;i<postImages.length;i++){
-            postImages[i]=Post.posts[i].getImageResourceID();
-        }
-
-        CaptionedImagesAdapter adapter=new CaptionedImagesAdapter(postNames,postImages);
-        postRecycler.setAdapter(adapter);
+        //CaptionedImagesAdapter adapter=new CaptionedImagesAdapter(postNames,postImages);
+       // postRecycler.setAdapter(adapter);
         LinearLayoutManager layoutManager=new LinearLayoutManager(this);
         postRecycler.setLayoutManager(layoutManager);
         return postRecycler;

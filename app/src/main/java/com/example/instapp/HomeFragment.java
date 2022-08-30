@@ -16,21 +16,21 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment_home, container, false);
-        String[] postNames=new String[Post.posts.length];
-        for (int i=0;i<postNames.length;i++){
-            postNames[i]=Post.posts[i].getName();
-        }
+//        String[] postNames=new String[Post.posts.length];
+//        for (int i=0;i<postNames.length;i++){
+//            postNames[i]=Post.posts[i].getName();
+//        }
+//
+//        int[] postImages=new int[Post.posts.length];
+//        for (int i=0;i<postImages.length;i++){
+//            postImages[i]=Post.posts[i].getImageResourceID();
+//        }
+//        CaptionedImagesAdapter adapter =new CaptionedImagesAdapter(postNames, postImages);
+//        RecyclerView res = view.findViewById(R.id.post_recycler);
 
-        int[] postImages=new int[Post.posts.length];
-        for (int i=0;i<postImages.length;i++){
-            postImages[i]=Post.posts[i].getImageResourceID();
-        }
-        CaptionedImagesAdapter adapter =new CaptionedImagesAdapter(postNames, postImages);
-        RecyclerView res = view.findViewById(R.id.post_recycler);
-
-        LinearLayoutManager mylayoutmanager = new LinearLayoutManager(view.getContext());
-        res.setLayoutManager(mylayoutmanager);
-        res.setAdapter(adapter);
+//        LinearLayoutManager mylayoutmanager = new LinearLayoutManager(view.getContext());
+//        res.setLayoutManager(mylayoutmanager);
+//        res.setAdapter(adapter);
         return view;
     }
 }

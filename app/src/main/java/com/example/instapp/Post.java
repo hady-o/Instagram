@@ -1,24 +1,32 @@
 package com.example.instapp;
 
 public class Post {
-    private String name;
-    private int imageResourceID;
+    private String userName;
+    private int userImage;
+    private String post;
+    private int postImage;
 
-    public static final Post[] posts={
-            new Post("Hadi Ehab",R.drawable.hadi),
-            new Post("Hadi Atef",R.drawable.nature)
-    };
 
-    private Post(String name,int imageResourceID){
-        this.name=name;
-        this.imageResourceID=imageResourceID;
+    public Post(String userName, int userImage, String post, int postImage) {
+        this.userName = userName;
+        this.userImage = userImage;
+        this.post = post;
+        this.postImage = postImage;
     }
 
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return userName;
     }
 
-    public int getImageResourceID() {
-        return imageResourceID;
+    public int getUserImage() {
+        return userImage;
+    }
+
+    public String getPost() {
+        return post;
+    }
+
+    public int getPostImage() {
+        return postImage;
     }
 }
