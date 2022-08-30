@@ -7,18 +7,33 @@
     tools:context=".Home2Activity">
 
 
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/myTab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </androidx.viewpager.widget.ViewPager>
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/myTab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabBackground="@drawable/background_shape"
-        app:tabIndicatorColor="@color/violet"
-        app:tabIconTint="@null"
+        android:minHeight="?actionBarSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:tabBackground="@drawable/background_shape"
         app:tabGravity="fill"
-        android:minHeight="?actionBarSize"
+        app:tabIconTint="@null"
+        app:tabIndicatorColor="@color/violet"
         app:tabIndicatorHeight="2dp"
         app:tabMode="fixed"
         app:tabTextColor="@color/white">
@@ -26,18 +41,5 @@
 
     </com.google.android.material.tabs.TabLayout>
 
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </androidx.viewpager.widget.ViewPager>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
