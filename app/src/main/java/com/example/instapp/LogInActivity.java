@@ -8,15 +8,17 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.instapp.databinding.ActivityLogInBinding;
+import com.example.instapp.firebase.SignInClass;
 
 public class LogInActivity extends AppCompatActivity {
     ActivityLogInBinding binding ;
+    SignInClass signInClass;
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         binding =ActivityLogInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        signInClass= new SignInClass(this);
         binding.signUpButtonId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,8 +30,8 @@ public class LogInActivity extends AppCompatActivity {
         binding.logInButtonId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(getApplicationContext(),Home2Activity.class);
-                startActivity(intent);
+                signInClass.signIn(binding.editTextLogin, binding.editTextPassword);
+
             }
         });
     }
