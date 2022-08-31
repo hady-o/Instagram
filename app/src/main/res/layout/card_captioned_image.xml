@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/white"
     tools:context=".Home2Activity">
 
@@ -92,6 +92,17 @@
         android:scaleType="fitCenter"
         android:src="@drawable/ic_comment"
         app:layout_constraintStart_toEndOf="@+id/imgView_love"
+        app:layout_constraintTop_toBottomOf="@+id/imgView_postPic" />
+
+    <ImageView
+        android:id="@+id/imgView_SAVE"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_baseline_bookmark_border_24"
+        app:layout_constraintStart_toEndOf="@+id/imgView_comment"
         app:layout_constraintTop_toBottomOf="@+id/imgView_postPic" />
 
 

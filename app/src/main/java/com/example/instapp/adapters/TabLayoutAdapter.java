@@ -1,4 +1,4 @@
-package com.example.instapp;
+package com.example.instapp.adapters;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

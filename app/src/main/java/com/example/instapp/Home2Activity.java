@@ -4,7 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.instapp.adapters.TabLayoutAdapter;
 import com.example.instapp.databinding.ActivityHome2Binding;
+import com.example.instapp.fragments.HomeFragment;
+import com.example.instapp.fragments.LoveFragment;
+import com.example.instapp.fragments.SearchFragment;
+import com.example.instapp.fragments.SettingFragment;
 
 public class Home2Activity extends AppCompatActivity {
     ActivityHome2Binding binding ;

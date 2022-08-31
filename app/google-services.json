@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "786109102242",
+    "project_id": "instgram-e0286",
+    "storage_bucket": "instgram-e0286.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786109102242:android:6f1e9f432d5444e5e73ffb",
+        "android_client_info": {
+          "package_name": "com.example.instapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786109102242-2gapiim0j2q30fh35ojehthpismcm0ch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1Z28Yy_8fAFj-lBmwBh0Vd6pECrNEs_I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786109102242-2gapiim0j2q30fh35ojehthpismcm0ch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
