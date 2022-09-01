@@ -18,7 +18,7 @@ public class LogInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding =ActivityLogInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        signInClass= new SignInClass(this);
+        signInClass= new SignInClass(this, binding.progressBar3);
         binding.signUpButtonId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -2,7 +2,9 @@ package com.example.instapp.firebase;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -22,20 +24,24 @@ public class SignInClass {
     Activity activity;
     Boolean up;
     FirebaseAuth mAuth;
+    ProgressBar progressBar;
     public static FirebaseUser currentUser;
 
-    public SignInClass(Activity activity) {
+    public SignInClass(Activity activity, ProgressBar progressBar) {
         this.activity = activity;
+        this.progressBar=progressBar;
         up=false;
         mAuth=FirebaseAuth.getInstance();
     }//end
 
     public boolean signIn(EditText email, EditText password) {
+        progressBar.setVisibility(View.VISIBLE);
         String userEmail = new String(String.valueOf(email.getText()));
         String userPassword = new String(String.valueOf(password.getText()));
         boolean found = false;
         if (userEmail.isEmpty() || userPassword.isEmpty()) {
-            Toast.makeText(activity, "please enter whole the data data", Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, "please enter the whole data", Toast.LENGTH_SHORT).show();
+            progressBar.setVisibility(View.GONE);
         } else {
             mAuth.signInWithEmailAndPassword(userEmail, userPassword)
                     .addOnCompleteListener(activity, new OnCompleteListener<AuthResult>() {
@@ -64,6 +70,7 @@ public class SignInClass {
 //                                                           break;
 //                                                       }
 //                                                    }
+                                                    progressBar.setVisibility(View.GONE);
                                                     Intent intent =new Intent(activity, Home2Activity.class);
                                                     activity.startActivity(intent);
                                                     Toast.makeText(activity, "signed in", Toast.LENGTH_SHORT).show();
@@ -73,6 +80,7 @@ public class SignInClass {
 
                             }
                             else {
+                                progressBar.setVisibility(View.GONE);
                                 // If sign in fails, display a message to the user.
                                 Toast.makeText(activity, "Authentication failed.",
                                         Toast.LENGTH_SHORT).show();

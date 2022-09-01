@@ -36,7 +36,7 @@ public class SignUpClass {
     public SignUpClass(Activity activity, ProgressBar progressBar) {
         this.activity = activity;
         this.progressBar = progressBar;
-        signInClass =new SignInClass(activity);
+        signInClass =new SignInClass(activity,progressBar);
         mAuth=FirebaseAuth.getInstance();
         up=false;
     }//end Constructor
