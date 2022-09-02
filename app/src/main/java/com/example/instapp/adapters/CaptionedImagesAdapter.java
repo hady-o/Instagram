@@ -3,15 +3,14 @@ package com.example.instapp.adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.instapp.Post;
+import com.bumptech.glide.Glide;
+import com.example.instapp.classes.Post;
 import com.example.instapp.R;
 
 import java.util.ArrayList;
@@ -37,9 +36,16 @@ public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImages
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
             Post post =posts.get(position);
             holder.post.setText(post.getPost());
-            holder.postImage.setImageResource(post.getPostImage());
-            holder.userImage.setImageResource(post.getUserImage());
+            Glide.with(holder.itemView.getContext())
+                .load(post.getUserImage())
+                .into(holder.userImage);
+
+            Glide.with(holder.itemView.getContext())
+                .load(post.getPostImage())
+                .into(holder.postImage);
             holder.userName.setText(post.getUserName());
+
+
     }
 
 
@@ -49,12 +55,13 @@ public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImages
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView userName, post;
+        TextView userName, post, time;
         ImageView userImage, postImage;
 
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+            time = itemView.findViewById(R.id.tv_time);
             userName = itemView.findViewById(R.id.tv_name);
             userImage = itemView.findViewById(R.id.circularImageView);
             post = itemView.findViewById(R.id.tv_status);

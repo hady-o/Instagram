@@ -1,24 +1,27 @@
-package com.example.instapp;
+package com.example.instapp.classes;
 
 public class Post {
     private String userName;
-    private int userImage;
+    private String userImage;
     private String post;
-    private int postImage;
+    private String postImage;
+    public String date;
 
 
-    public Post(String userName, int userImage, String post, int postImage) {
+    public Post(String userName, String userImage, String post, String postImage,String date) {
         this.userName = userName;
         this.userImage = userImage;
         this.post = post;
         this.postImage = postImage;
+        this.date = date;
     }
 
     public String getUserName() {
         return userName;
     }
 
-    public int getUserImage() {
+
+    public String getUserImage() {
         return userImage;
     }
 
@@ -26,7 +29,7 @@ public class Post {
         return post;
     }
 
-    public int getPostImage() {
+    public String getPostImage() {
         return postImage;
     }
 }

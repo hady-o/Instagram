@@ -73,38 +73,25 @@ public class SignUpClass {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 if (user != null) {
                                     //set user Desplay name
-                                    UserProfileChangeRequest profile=new UserProfileChangeRequest.Builder()
+                                    UserProfileChangeRequest profile = new UserProfileChangeRequest.Builder()
                                             .setDisplayName(userName)
-                                            .build()
-                                            ;
-                                    user.updateProfile(profile);
-                                        //set user data in fireStore
-                                    DocumentReference mydef = FirebaseFirestore.getInstance().document("sampledata/users");
-                                    Map<String, Object> userdata = new HashMap<>();
-                                    userdata.put("name", userName);
-                                    userdata.put("id", user.getUid());
-                                    userdata.put("email", userEmail);
-                                    userdata.put("uri", "");
+                                            .build();
+                                    user.updateProfile(profile).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
 
-//                                    FirebaseMessaging.getInstance().getToken()
-//                                            .addOnCompleteListener(new OnCompleteListener<String>() {
-//                                                @Override
-//                                                public void onComplete(@NonNull Task<String> task) {
-//                                                    userdata.put("token", task.getResult());
-//
-//                                                }
-//                                            });
-                                    mydef.collection("data")
-                                                            .add(userdata);
-
-                                    Intent intent =new Intent(activity, SignUp2Activity.class);
-                                    // signInClass.signIn(email,password);
-                                    progressBar.setVisibility(View.GONE);
-                                    Toast.makeText(activity, "you have signed up successfully", Toast.LENGTH_SHORT).show();
-                                    activity.startActivity(intent);
-
-
+                                            Intent intent =new Intent(activity, SignUp2Activity.class);
+                                            //signInClass.signIn(email,password);
+                                            progressBar.setVisibility(View.GONE);
+                                            Toast.makeText(activity, "you have signed up successfully", Toast.LENGTH_SHORT).show();
+                                            activity.startActivity(intent);
+                                        }
+                                    });
                                 }
+
+
+
+
                             } else if (task.getException() instanceof FirebaseAuthUserCollisionException) {
                                 Toast.makeText(activity, "this Email is already exist", Toast.LENGTH_LONG).show();
                                 progressBar.setVisibility(View.GONE);

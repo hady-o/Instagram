@@ -24,9 +24,11 @@
         <entry key="..\:/Users/hadi/AndroidStudioProjects/InstApp/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
         <entry key="..\:/Users/hadi/Documents/GitHub/Instagram/app/src/main/res/drawable-hdpi/ic_comment.xml" value="0.179" />
         <entry key="..\:/Users/hadi/Documents/GitHub/Instagram/app/src/main/res/drawable/background_shape.xml" value="0.121" />
+        <entry key="..\:/Users/hadi/Documents/GitHub/Instagram/app/src/main/res/drawable/ic_baseline_add_photo_alternate_24.xml" value="0.189" />
         <entry key="..\:/Users/hadi/Documents/GitHub/Instagram/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.121" />
         <entry key="..\:/Users/hadi/Documents/GitHub/Instagram/app/src/main/res/drawable/ic_comment.xml" value="0.179" />
         <entry key="..\:/Users/hadi/Documents/GitHub/Instagram/app/src/main/res/drawable/ic_not_be_loved.xml" value="0.179" />
+        <entry key="..\:/Users/hadi/Documents/GitHub/Instagram/app/src/main/res/layout/activity_add_post.xml" value="0.25" />
         <entry key="..\:/Users/hadi/Documents/GitHub/Instagram/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/hadi/Documents/GitHub/Instagram/app/src/main/res/layout/activity_home2.xml" value="0.33" />
         <entry key="..\:/Users/hadi/Documents/GitHub/Instagram/app/src/main/res/layout/activity_log_in.xml" value="0.25" />
@@ -40,6 +42,7 @@
         <entry key="..\:/Users/hadi/Documents/GitHub/Instagram/app/src/main/res/layout/fragment_search.xml" value="0.25" />
         <entry key="..\:/Users/hadi/Documents/GitHub/Instagram/app/src/main/res/layout/fragment_setting.xml" value="0.25" />
         <entry key="..\:/Users/hadi/Documents/GitHub/Instagram/app/src/main/res/layout/fragment_sittings.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/hadi/Documents/GitHub/Instagram/app/src/main/res/layout/search_card.xml" value="0.26875" />
       </map>
     </option>
   </component>

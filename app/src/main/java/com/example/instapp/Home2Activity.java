@@ -2,7 +2,9 @@ package com.example.instapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.instapp.adapters.TabLayoutAdapter;
 import com.example.instapp.databinding.ActivityHome2Binding;
@@ -24,6 +26,13 @@ public class Home2Activity extends AppCompatActivity {
         tabLayoutAdapter.addFragment(new SearchFragment(),"");
         tabLayoutAdapter.addFragment(new LoveFragment(),"");
         tabLayoutAdapter.addFragment(new SettingFragment(),"");
+        binding.addPostBtnId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(getApplicationContext(),AddPostActivity.class);
+                startActivity(intent);
+            }
+        });
 
         binding.viewPager.setAdapter(tabLayoutAdapter);
         binding.myTab.setupWithViewPager(binding.viewPager);
