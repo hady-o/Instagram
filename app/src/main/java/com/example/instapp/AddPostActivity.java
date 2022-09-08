@@ -15,9 +15,10 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.instapp.classes.BackButton;
+import com.example.instapp.classes.Theme;
 import com.example.instapp.databinding.ActivityAddPostBinding;
 import com.example.instapp.firebase.AddPostClass;
-import com.example.instapp.firebase.CurrentUserClass;
+import com.example.instapp.classes.CurrentUserClass;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
@@ -77,7 +78,9 @@ public class AddPostActivity extends AppCompatActivity {
                     if (CurrentUserClass.currentUser.getPhotoUrl() != null) {
                         u = CurrentUserClass.currentUser.getPhotoUrl().toString();
                     }
-                    AddPostClass.addPost(binding.progressBar3, AddPostActivity.this, CurrentUserClass.currentUser.getUid(), CurrentUserClass.currentUser.getDisplayName(), u, binding.editTextPost.getText().toString(), "");
+                    AddPostClass.addPost(binding.progressBar3, AddPostActivity.this, CurrentUserClass.currentUser.getUid(), CurrentUserClass.currentUser.getDisplayName(),CurrentUserClass.currentUser.getEmail() ,u, binding.editTextPost.getText().toString(), "");
+
+
                 }
 
             }
@@ -140,11 +143,12 @@ public class AddPostActivity extends AppCompatActivity {
                             {
                                 userUri =CurrentUserClass.currentUser.getPhotoUrl().toString();
                             }
-                            if(image_uri!=null)
+                            if(profileimageurl!=null)
                             {
-                                postUri=image_uri.toString();
+                                postUri=profileimageurl.toString();
                             }
-                            AddPostClass.addPost(binding.progressBar3, AddPostActivity.this, CurrentUserClass.currentUser.getUid(), CurrentUserClass.currentUser.getDisplayName(), userUri,binding.editTextPost.getText().toString(),postUri);
+                            AddPostClass.addPost(binding.progressBar3, AddPostActivity.this, CurrentUserClass.currentUser.getUid(), CurrentUserClass.currentUser.getDisplayName(), CurrentUserClass.currentUser.getEmail(), userUri,binding.editTextPost.getText().toString(),postUri);
+
 
                         }
                     });
@@ -158,5 +162,11 @@ public class AddPostActivity extends AppCompatActivity {
 
         }
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Theme.setTheme();
     }
 }

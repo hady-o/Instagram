@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color1_down"
+
+    tools:context=".UserInfoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/background_color1_down"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backBtnId"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:text="Create Post"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="italic|bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/backBtnId"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/circularImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/hadi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/followersNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="80dp"
+        android:text="4"
+        android:textColor="@color/white"
+        android:textSize="23dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/postsNum"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+        android:text="@string/following"
+        android:textColor="@color/gray"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/following" />
+
+    <TextView
+        android:id="@+id/following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:text="4"
+        android:textColor="@color/white"
+        android:textSize="23dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/followersNum"
+        app:layout_constraintTop_toTopOf="@+id/followersNum" />
+
+    <TextView
+
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/followers"
+        android:layout_marginStart="40dp"
+        android:textColor="@color/gray"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/followersNum" />
+
+    <TextView
+        android:id="@+id/emailId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Hadiatef70@gmail.com"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameId" />
+
+    <Button
+        android:id="@+id/followButtonId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="150dp"
+
+        android:background="@drawable/button_shape"
+        android:text="@string/un_follow"
+        android:textColor="@color/editText_color1"
+        android:textSize="18sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailId" />
+
+    <TextView
+
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/posts"
+        android:textColor="@color/gray"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@+id/circularImageView"
+        app:layout_constraintTop_toBottomOf="@+id/postsNum" />
+
+    <TextView
+        android:id="@+id/nameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Hadi atef"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="italic|bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circularImageView" />
+
+    <TextView
+        android:id="@+id/postsNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="24dp"
+        android:text="4"
+        android:textColor="@color/white"
+        android:textSize="23dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/circularImageView"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+    <Button
+        android:id="@+id/editProfileButtonId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="150dp"
+
+        android:drawableStart="@drawable/ic_baseline_edit_24"
+        android:visibility="gone"
+        android:text="@string/edit_profile"
+        android:textColor="@color/editText_color1"
+        android:textSize="18sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailId" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/post_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="280dp"
+        android:background="@color/white"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/followButtonId"
+        app:layout_constraintVertical_bias="0.0">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

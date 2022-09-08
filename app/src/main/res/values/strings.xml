@@ -12,6 +12,25 @@
     <string name="with_no_account">Don\'t have an account?</string>
     <string name="already_have_account">Already have an account?</string>
     <string name="sign_up_title">Sign Up</string>
+    <string name="darkMode">Dark Mode</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="what_s_on_your_mind">What\'s on your mind?</string>
+    <string name="create_post">Create Post</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="chane_profile_photo">Chane Profile Photo</string>
+    <string name="save_your_photo">Save Your Photo</string>
+    <string name="skip">Skip</string>
+    <string name="un_follow">Un Follow</string>
+    <string name="follow">Follow</string>
+    <string name="posts">Posts</string>
+    <string name="followers">Followers</string>
+    <string name="following">following</string>
+    <string name="name_or_e_mail">name or e-mail</string>
+    <string name="profile">Profile</string>
+    <string name="theme">Theme</string>
+    <string name="language">Language</string>
+    <string name="about_us">About Us</string>
+    <string name="loguot">LogUot</string>
 </resources>

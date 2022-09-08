@@ -1,12 +1,14 @@
 package com.example.instapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import com.example.instapp.adapters.TabLayoutAdapter;
+import com.example.instapp.classes.Theme;
 import com.example.instapp.databinding.ActivityHome2Binding;
 import com.example.instapp.fragments.HomeFragment;
 import com.example.instapp.fragments.LoveFragment;
@@ -21,6 +23,11 @@ public class Home2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding =ActivityHome2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+
+        //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+
         tabLayoutAdapter =new TabLayoutAdapter(getSupportFragmentManager());
         tabLayoutAdapter.addFragment(new HomeFragment(),"");
         tabLayoutAdapter.addFragment(new SearchFragment(),"");
@@ -44,5 +51,10 @@ public class Home2Activity extends AppCompatActivity {
 
 
         //binding.myTab.getTabAt(0).setCustomView();
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Theme.setTheme();
     }
 }

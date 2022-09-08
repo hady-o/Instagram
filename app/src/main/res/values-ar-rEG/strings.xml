@@ -13,4 +13,24 @@
     <string name="developed_by_hadi">تم تطويره بواسطة هادي</string>
     <string name="sign_up_title">إنشاء حساب</string>
     <string name="sign_up">أنشئ حساب</string>
+    <string name="darkMode">الوضع المظلم</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_photo">أضف صورة</string>
+    <string name="what_s_on_your_mind">بماذا تفكر؟</string>
+    <string name="create_post">اضف منشور</string>
+    <string name="edit_profile">تعديل</string>
+    <string name="chane_profile_photo">تعديل الصورة الشخصية</string>
+    <string name="save_your_photo">حفظ الصورة</string>
+    <string name="skip">تخطي</string>
+    <string name="un_follow">الغاء المتابعة</string>
+    <string name="follow">متابعة</string>
+    <string name="posts">المنشورات</string>
+    <string name="followers">المتابعين</string>
+    <string name="following">يتابع</string>
+    <string name="name_or_e_mail">الاسم او البريد </string>
+    <string name="profile">الصفحة الشخصية</string>
+    <string name="theme">السمة</string>
+    <string name="language">اللغة</string>
+    <string name="about_us">حولنا</string>
+    <string name="loguot">تسجيل الخروج</string>
 </resources>

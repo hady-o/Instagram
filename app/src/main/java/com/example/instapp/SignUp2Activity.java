@@ -13,11 +13,9 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.instapp.databinding.ActivitySignUp2Binding;
-import com.example.instapp.firebase.CurrentUserClass;
-import com.google.android.gms.tasks.OnCompleteListener;
+import com.example.instapp.classes.CurrentUserClass;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
@@ -44,7 +42,7 @@ public class SignUp2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySignUp2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        binding.savePhotoButtonId.setEnabled(false);
 
         binding.progressBar3.setVisibility(View.GONE);
         binding.imageView5.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +59,23 @@ public class SignUp2Activity extends AppCompatActivity {
             }
         });
 
+        binding.skipPhotoButtonId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseUser user =FirebaseAuth.getInstance().getCurrentUser();
+                CurrentUserClass.currentUser =user;
+                DocumentReference mydef = FirebaseFirestore.getInstance().document("users/"+user.getUid());
+                Map<String, Object> userdata = new HashMap<>();
+                userdata.put("name", user.getDisplayName());
+                userdata.put("id", user.getUid());
+                userdata.put("email", user.getEmail());
+                userdata.put("uri", "");
+                mydef.set(userdata);
+                Intent intent =new Intent(getApplicationContext(),Home2Activity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
     }
@@ -121,8 +136,6 @@ public class SignUp2Activity extends AppCompatActivity {
                             userdata.put("id", user.getUid());
                             userdata.put("email", user.getEmail());
                             userdata.put("uri", profileimageurl);
-
-//
                             mydef.set(userdata);
                         }
                     });
@@ -165,6 +178,7 @@ public class SignUp2Activity extends AppCompatActivity {
 
                             Intent intent =new Intent(getApplicationContext(),Home2Activity.class);
                             startActivity(intent);
+                            finish();
                         }
                     })
 

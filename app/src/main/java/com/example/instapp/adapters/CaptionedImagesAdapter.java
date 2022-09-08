@@ -1,5 +1,6 @@
 package com.example.instapp.adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.instapp.UserInfoActivity;
+import com.example.instapp.classes.CurrentUserClass;
 import com.example.instapp.classes.Post;
 import com.example.instapp.R;
+import com.example.instapp.classes.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +49,22 @@ public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImages
                 .into(holder.postImage);
             holder.userName.setText(post.getUserName());
 
+            holder.userImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    CurrentUserClass.currentFriend = new User(post.getUserId(), post.getUserName(), post.getUserEmail(), post.getUserImage());
+                    Intent intent = new Intent(holder.itemView.getContext(), UserInfoActivity.class);
+                    holder.itemView.getContext().startActivity(intent);
+                }
+            });
+            holder.userName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    CurrentUserClass.currentFriend = new User(post.getUserId(), post.getUserName(), post.getUserEmail(), post.getUserImage());
+                    Intent intent = new Intent(holder.itemView.getContext(), UserInfoActivity.class);
+                    holder.itemView.getContext().startActivity(intent);
+                }
+            });
 
     }
 

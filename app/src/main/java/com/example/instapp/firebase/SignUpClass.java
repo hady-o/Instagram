@@ -85,6 +85,7 @@ public class SignUpClass {
                                             progressBar.setVisibility(View.GONE);
                                             Toast.makeText(activity, "you have signed up successfully", Toast.LENGTH_SHORT).show();
                                             activity.startActivity(intent);
+                                            activity.finish();
                                         }
                                     });
                                 }
